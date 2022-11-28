@@ -3,16 +3,8 @@ from os.path import exists, isfile, join
 from shutil import copy
 
 
-def path_input():
-    path = input('Введите путь вствки: ')
-    while exists(path):
-        print('Неправильный путь')
-        path = input('Введите путь файла: ')
-    return path
-
-
-def path_output():
-    path = input('Введите путь исходного: ')
+def path():
+    path = input('Введите путь ')
     while exists(path):
         print('Неправильный путь')
         path = input('Введите путь файла: ')
@@ -20,8 +12,8 @@ def path_output():
 
 
 if __name__ == '__main__':
-    sending = path_input()
-    path = path_output()
+    sending = path()
+    path = path()
 
     count = 0
     for file in listdir(path):
